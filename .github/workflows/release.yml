@@ -1,8 +1,7 @@
 name: MegaSDKREST Release
-on:
-  push:
-    tags:
-      - "v*.*.*"
+
+on: workflow_dispatch
+
 jobs:
   BuildArtifacts:
     runs-on: ubuntu-latest
@@ -81,7 +80,7 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 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
         with:
           name: MegaSDKREST Release
           files: |
