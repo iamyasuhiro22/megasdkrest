@@ -80,7 +80,7 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           name: MegaSDKREST Release
           files: |
